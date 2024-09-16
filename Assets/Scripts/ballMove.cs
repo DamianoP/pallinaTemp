@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallMove : MonoBehaviour{
@@ -36,7 +38,14 @@ public class BallMove : MonoBehaviour{
     private void OnCollisionStay(Collision c){
         onTerrain = true; // Non appena tocco un oggetto o il pavimento mi segno che sono a terra
     }
-    
-    
-    
+
+    public AudioSource aSource;
+    public AudioClip aClip; // presa da https://mixkit.co/free-sound-effects/alerts/
+    private void OnTriggerEnter(Collider other){
+        GameObject go = other.gameObject;
+        if (go.CompareTag("coinTag")){
+            aSource.PlayOneShot(aClip);
+            go.SetActive(false);
+        }
+    }
 }
