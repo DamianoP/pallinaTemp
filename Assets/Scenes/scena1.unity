@@ -1612,6 +1612,7 @@ GameObject:
   - component: {fileID: 1631106996}
   - component: {fileID: 1631106995}
   - component: {fileID: 1631106998}
+  - component: {fileID: 1631106999}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1701,12 +1702,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631106994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4109daefff21f48068b4c21e3f5e2bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1698724325}
+--- !u!114 &1631106999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631106994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a97676f9e84428a6094120bfa4af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1698724325}
+  mouseSensitivity: 5
+  distanceFromBall: 5
+  smoothTime: 0.3
 --- !u!1001 &1652940244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1988,13 +2005,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698724325}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -1.3570001, z: 1.7709999}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1832034721}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1698724330
 MonoBehaviour:
   m_ObjectHideFlags: 0
